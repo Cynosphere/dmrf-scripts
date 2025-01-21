@@ -1,0 +1,22 @@
+const TWITTER_REGEX = /https?:\/\/((fix(up|v)|stupidpenis|girlcock)?x|([fv]x)?twitter|ilsforpresident)\.com/g;
+const REPLACEMENT = "https://tw.c7.pm";
+
+module.exports = {
+  spec: {
+    mrfVersion: 1,
+    name: "Twitter Replacer",
+  },
+  sendHook: async (msg, forward) => {
+    msg.content = msg.content.replace(TWITTER_REGEX, REPLACEMENT);
+    return forward(msg);
+  },
+  receiveHook: async (msg, reject, forward) => {
+    if (TWITTER_REGEX.test(msg.content)) {
+      msg.content = msg.content.replace(TWITTER_REGEX, REPLACEMENT);
+      for (const embed of msg.embeds) {
+        if (TWITTER_REGEX.test(embed.url)) embed.url = embed.url.replace(TWITTER_REGEX, REPLACEMENT);
+      }
+      return forward(msg);
+    }
+  },
+};
