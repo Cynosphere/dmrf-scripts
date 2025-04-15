@@ -1,4 +1,5 @@
-const TWITTER_REGEX = /https?:\/\/((fix(up|v)|stupidpenis|girlcock)?x|([fv]x)?twitter|ilsforpresident)\.com/g;
+const TWITTER_REGEX =
+  /https?:\/\/((fix(up|v)|stupidpenis|girlcock|\x68\x69\x74\x6C\x65\x72|\x6E\x69\x67\x67\x65\x72)?x(cancel)?|([fv]x)?twitter|ilsforpresident|lightbrd)\.com/g;
 const REPLACEMENT = "https://tw.c7.pm";
 
 module.exports = {
