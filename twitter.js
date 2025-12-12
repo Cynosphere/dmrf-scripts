@@ -1,6 +1,6 @@
 const TWITTER_REGEX =
-  /https?:\/\/((fix(up|v)|stupidpenis|girlcock|\x68\x69\x74\x6C\x65\x72|\x6E\x69\x67\x67\x65\x72)?x(cancel)?|([fv]x)?twitter(vx)?|ilsforpresident|lightbrd)\.com/g;
-const REPLACEMENT = "https://tw.c7.pm";
+  /https?:\/\/((fix(up|v)|stupidpenis|girlcock|\x68\x69\x74\x6C\x65\x72|\x6E\x69\x67\x67\x65\x72)?x(cancel)?|([fv]x)?twitt[ep]r(vx)?|ilsforpresident|lightbrd)\.com/g;
+const REPLACEMENT = "https://tw1tter.com";
 
 module.exports = {
   spec: {
