@@ -1,5 +1,5 @@
 const TWITTER_REGEX =
-  /https?:\/\/((fix(up|v)|stupidpenis|girlcock|\x68\x69\x74\x6C\x65\x72|\x6E\x69\x67\x67\x65\x72)?x(cancel)?|([fv]x)?twitt[ep]r(vx)?|ilsforpresident|lightbrd)\.com/g;
+  /https?:\/\/((fix(up|v)|stupidpenis|girlcock|peepeepoopoodumdumtwitter|skibidi|hotyurise|\x68\x69\x74\x6C\x65\x72|\x6E\x69\x67\x67\x65\x72(\x66\x61\x67\x67\x6f\x74)?|\x63\x75\x6e\x6e\x79|\x67\x6f\x79\x69\x6d)?x(cancel)?|([fv]x)?twitt[ep]r(vx)?|ilsforpresident|lightbrd)\.com/g;
 const REPLACEMENT = "https://tw1tter.com";
 
 module.exports = {
@@ -15,7 +15,8 @@ module.exports = {
     if (TWITTER_REGEX.test(msg.content)) {
       msg.content = msg.content.replace(TWITTER_REGEX, REPLACEMENT);
       for (const embed of msg.embeds) {
-        if (TWITTER_REGEX.test(embed.url)) embed.url = embed.url.replace(TWITTER_REGEX, REPLACEMENT);
+        if (TWITTER_REGEX.test(embed.url))
+          embed.url = embed.url.replace(TWITTER_REGEX, REPLACEMENT);
       }
       return forward(msg);
     }
